@@ -1,0 +1,27 @@
+$color1: #000;
+$color2: #fff;
+$color3: #2c3331;
+$color4: #3c594e;
+$color5: #758981;
+$color6: #edefee;
+$color7: #efb139;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: $color3;
+}
+
+$primary-color: #480ca8;
+$primary-color-text: black;
+$secondary-color: #efb137;
+$container-lg: 1400px;
+
+@mixin transitioned {
+  transition: 0.4s ease;
+}

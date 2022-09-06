@@ -1,0 +1,16 @@
+#header {
+  background-image: url("../assets/ACME_Background-Pattern.png");
+  background-position: center;
+  background-size: cover;
+
+  .page-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 200px;
+  }
+
+  h1 {
+    color: $color7;
+  }
+}

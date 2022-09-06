@@ -1,0 +1,222 @@
+#news {
+  .main-img-wrapper {
+    width: 100%;
+    padding-top: 31.25%;
+    background: url("../assets/pics/News_1.jpeg") center;
+
+    @media screen and (max-width: 767px) {
+      background-position: left 20%;
+    }
+  }
+
+  .news-content {
+    padding-top: 50px;
+    display: flex;
+    gap: 10px;
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding-top: 10px;
+    }
+
+    .news-content__text {
+      h2,
+      h3 {
+        color: $color4;
+      }
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      ul {
+        margin-top: 20px;
+
+        li {
+          // list-style-image: url("../assets/Icons/Arrowhead-Right.svg");
+          position: relative;
+          padding-left: 50px;
+
+          &::before {
+            content: url("../assets/Icons/Arrowhead-Right.svg");
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+          }
+
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .news-slider {
+        margin: 70px 0 50px;
+
+        @media screen and (max-width: 767px) {
+          margin-left: -2rem;
+          width: 100vw;
+        }
+
+        @media screen and (max-width: 575px) {
+          margin-left: -20px;
+        }
+
+        .swiper {
+          border-bottom: 2px solid $color7;
+          position: relative;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          background-color: $color7;
+          opacity: 1;
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          top: unset;
+          right: 0;
+          left: unset;
+
+          @media screen and (max-width: 767px) {
+            display: none;
+          }
+
+          img {
+            width: 60px;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+
+        .swiper-button-next {
+          bottom: 86px;
+        }
+
+        .swiper-button-prev {
+          bottom: 0;
+        }
+        .swiper-slide {
+          height: unset !important;
+
+          .text-info {
+            padding: 16px 0;
+            opacity: 0.6;
+
+            @media screen and (max-width: 767px) {
+              padding-left: 2rem;
+              padding-right: 2rem;
+            }
+
+            @media screen and (max-width: 575px) {
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+          }
+
+          .img {
+            padding-top: 31.25%;
+            background-position: center;
+          }
+
+          &:nth-child(1) {
+            .img {
+              background-image: url("../assets/pics/News_1.jpeg");
+            }
+          }
+
+          &:nth-child(2) {
+            .img {
+              background-image: url("../assets/pics/News_2.jpeg");
+            }
+          }
+
+          &:nth-child(3) {
+            .img {
+              background-image: url("../assets/pics/News_3.jpeg");
+            }
+          }
+
+          &:nth-child(4) {
+            .img {
+              background-image: url("../assets/pics/News_1.jpeg");
+            }
+          }
+
+          &:nth-child(5) {
+            .img {
+              background-image: url("../assets/pics/News_2.jpeg");
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .news-content__additional {
+      @media screen and (min-width: 992px) {
+        min-width: 390px;
+      }
+      .info-section {
+        h1 {
+          line-height: 0.9;
+          color: $color6;
+        }
+
+        .card {
+          padding: 40px;
+          background-color: $color6;
+
+          @media screen and (max-width: 767px) {
+            padding: 30px 20px;
+          }
+
+          img {
+            max-width: 100%;
+          }
+
+          h2 {
+            margin-top: 2rem;
+            margin-bottom: 10px;
+          }
+
+          div + .links {
+            margin-top: 20px;
+          }
+
+          .links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+            .item {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+
+              * {
+                font-weight: 500;
+              }
+
+              .btn-yellow {
+                &:hover {
+                  .btn-icon {
+                    transform: translateY(3px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

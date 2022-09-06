@@ -1,0 +1,55 @@
+#contact {
+  background: url("../assets/ACME_Background-Pattern.png") center;
+  background-size: cover;
+  padding: 70px 0;
+
+  *:not(input):not(textarea):not(a) {
+    color: #fff;
+  }
+
+  .btn-yellow {
+    &:hover {
+      .btn-icon {
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  h2 {
+    @media screen and (max-width: 575px) {
+      font-size: 29px;
+    }
+  }
+
+  .form {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+
+    & > * {
+      width: 50%;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
+    }
+
+    .right {
+      .custom-form-control {
+        textarea {
+          height: 280px;
+        }
+      }
+    }
+  }
+
+  .flex.justify-end {
+    @media screen and (max-width: 1145px) {
+      width: 100%;
+      flex-grow: 1;
+    }
+  }
+}
